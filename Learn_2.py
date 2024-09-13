@@ -11,17 +11,17 @@ async def run_playwright():
         page = await browser.new_page()
 
         # Переход на страницу авторизации
-        #await page.goto('Здесь был URL')
+        await page.goto('Здесь был URL')
 
         # Заполнение полей формы
-       # await page.fill('input[type="email"]', 'Здесь был email')  # Замените на актуальный селектор
-       # await page.fill('input[type="password"]', 'Здесь был пароль')  # Замените на актуальный селектор
+        await page.fill('input[type="email"]', 'Здесь был email')  # Замените на актуальный селектор
+        await page.fill('input[type="password"]', 'Здесь был пароль')  # Замените на актуальный селектор
 
         # Отправка формы (например, нажатие кнопки "Войти")
-       # await page.click('button[type="submit"]')  # Замените на актуальный селектор
+        await page.click('button[type="submit"]')  # Замените на актуальный селектор
 
         # Ждем, пока страница загрузится (можно использовать `wait_for_load_state`)
-       # await page.wait_for_load_state("networkidle")
+        await page.wait_for_load_state("networkidle")
 
         # Переход на страницу, где нужно искать элементы
         await page.goto('https://vk.com/')  # Замените на актуальный URL
